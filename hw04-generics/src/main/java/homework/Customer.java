@@ -21,14 +21,16 @@ public class Customer {
         return name;
     }
 
-    void setName(String name) {
+    public Customer setName(String name) {
+        return new Customer(this.id, name, this.scores);
     }
 
     public long getScores() {
         return scores;
     }
 
-    void setScores(long scores) {
+    public Customer setScores(long scores) {
+        return new Customer(this.id, this.name, scores);
     }
 
     @Override
