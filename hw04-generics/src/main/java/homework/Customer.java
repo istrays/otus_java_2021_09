@@ -4,13 +4,19 @@ import java.util.Objects;
 
 public class Customer {
     private final long id;
-    private final String name;
-    private final long scores;
+    private String name;
+    private long scores;
 
     public Customer(long id, String name, long scores) {
         this.id = id;
         this.name = name;
         this.scores = scores;
+    }
+
+    public Customer(Customer other) {
+        this.id = other.id;
+        this.name = other.name;
+        this.scores = other.scores;
     }
 
     public long getId() {
@@ -21,16 +27,16 @@ public class Customer {
         return name;
     }
 
-    public Customer setName(String name) {
-        return new Customer(this.id, name, this.scores);
+    public void setName(String name) {
+        this.name = name;
     }
 
     public long getScores() {
         return scores;
     }
 
-    public Customer setScores(long scores) {
-        return new Customer(this.id, this.name, scores);
+    public void setScores(long scores) {
+        this.scores = scores;
     }
 
     @Override
