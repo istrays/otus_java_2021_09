@@ -1,3 +1,5 @@
 rootProject.name = 'otus_java_2021_09'
 include 'hw01-gradle'
 include 'hw04-generics'
+include 'hw06-annotations'
+include 'test-framework'
